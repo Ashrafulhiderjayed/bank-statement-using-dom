@@ -1,0 +1,7 @@
+body{
+    background-image: url("images/background.jpeg");
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+

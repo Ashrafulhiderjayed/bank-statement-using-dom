@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="comment-container">
+        <h2>Comment here</h2>
+    <textarea name="" id="new-comment" cols="60" rows="10"></textarea><br>
+    <button id="submit-comment">Comment</button>
+    </div>
+
+    <script>
+        //1. add button event handler
+        document.getElementById('submit-comment').addEventListener('click', function(){
+            //2. get user comment
+            const commentBox = document.getElementById('new-comment');
+            // const userComment = commentBox.value;
+
+            //3. submit comment
+            const p = document.createElement('p');
+            p.innerText = commentBox.value;
+
+            // 4. append the comment 
+            const commentContainer = document.getElementById('comment-container');
+            commentContainer.appendChild(p);
+            
+        })
+    </script>
+    <script src="comment.js"></script>
+</body>
+</html>
